@@ -20,6 +20,13 @@ namespace calculatorAPI.Controllers
 
         }
 
+        [HttpGet]
+        public double sub(double a, double b)
+        {
+            Response.Headers.Add("Access-Control-Allow-Origin", "https://localhost:11293");
+            return calculatorLib.Class1.Substract(a, b);
+        }
+
     }
 
 }
