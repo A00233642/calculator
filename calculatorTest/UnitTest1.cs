@@ -55,5 +55,28 @@ namespace calculatorTest
             double actual = Class1.Substract(a, b);
             Assert.AreEqual(x, actual);
         }
+
+        [DataTestMethod]
+        [DataRow(4, 3, 12)]
+        [DataRow(5, 3, 15)]
+        [DataRow(2, 3, 6)]
+        [DataRow(3, 3, 9)]
+        [DataRow(4, 3, 12)]
+        [DataRow(6, 3, 18)]
+        [DataRow(7, 3, 21)]
+        [DataRow(8, 3, 24)]
+        [DataRow(9, 3, 27)]
+        [DataRow(10, 3, 30)]
+
+
+        [TestCategory("Multiplication")]
+
+        public void TestMethodSMultiplication(double a, double b, double x)
+        {
+            double actual = Class1.Multiply(a, b);
+            Assert.AreEqual(x, actual);
+
+        }
+
     }
 }
