@@ -78,5 +78,24 @@ namespace calculatorTest
 
         }
 
+        [DataTestMethod]
+        [DataRow(10, 2, 5)]
+        [DataRow(25, 5, 5)]
+        [DataRow(30, 5, 6)]
+        [DataRow(2, 2, 1)]
+        [DataRow(100, 4, 25)]
+        [DataRow(4, 2, 2)]
+        [DataRow(8, 2, 4)]
+        [DataRow(12, 6, 2)]
+        [DataRow(14, 7, 2)]
+        [DataRow(16, 8, 2)]
+
+        [TestCategory("Division")]
+
+        public void TestMethodDivision(double a, double b, double x)
+        {
+            double actual = Class1.Division(a, b);
+            Assert.AreEqual(x, actual);
+        }
     }
 }
