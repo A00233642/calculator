@@ -9,6 +9,10 @@ namespace calculatorLib
             return a + b;
         }
 
+        public static  double Substract(double a, double b)
+        {
+            return a - b;
+        }
 
 
 
