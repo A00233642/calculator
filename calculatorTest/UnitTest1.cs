@@ -22,8 +22,6 @@ namespace calculatorTest
         [DataRow(4, 10, 14)]
         [DataRow(4, 11, 15)]
         [DataRow(4, 12, 16)]
-
-
         [TestCategory("Addition")]
 
         public void CalculatorAddTestMethod1(double a, double b, double x)
@@ -37,6 +35,25 @@ namespace calculatorTest
             //Assert.AreEqual(expected, varCal);
         }
 
+        // [TestMethod]
+        [DataTestMethod]
+        [DataRow(4, 3, 1)]
+        [DataRow(4, 4, 0)]
+        [DataRow(5, 4, 1)]
+        [DataRow(6, 4, 2)]
+        [DataRow(7, 4, 3)]
+        [DataRow(8, 4, 4)]
+        [DataRow(9, 4, 5)]
+        [DataRow(10, 4, 6)]
+        [DataRow(11, 4, 7)]
+        [DataRow(12, 4, 8)]
+        [TestCategory("Subtraction")]
 
+        public void CalculatorSubtractionTestMethod1(double a, double b, double x)
+        {
+
+            double actual = Class1.Substract(a, b);
+            Assert.AreEqual(x, actual);
+        }
     }
 }
