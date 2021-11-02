@@ -12,6 +12,14 @@ namespace calculatorAPI.Controllers
     public class calculatorController : ControllerBase
     {
 
-}
+        [HttpGet]
+        public double add(double a, double b)
+        {
+            Response.Headers.Add("Access-Control-Allow-Origin", "https://localhost:11293");
+            return calculatorLib.Class1.Add(a, b);
+
+        }
 
     }
+
+}
